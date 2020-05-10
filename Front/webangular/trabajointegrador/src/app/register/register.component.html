@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>
+
+
+<h1>Alumno</h1>
+<form>
+    <div class="form-group">
+      <label for="exampleInputNombre">Nombre</label>
+      <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputApellido">Apellido</label>
+      <input type="apellido" class="form-control" id="exampleInputApellido">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDNI">DNI</label>
+        <input type="dni" class="form-control" id="exampleInputDNI">
+      </div>
+      <label for="exampleInputFecha">Fecha</label>
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+    <div class="form-group">
+        <label for="exampleInputMail">Mail</label>
+        <input type="mail" class="form-control" id="exampleInputMail">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputObraSocial">Obra Social</label>
+        <input type="obrasocial" class="form-control" id="exampleInputObraSocial">
+      </div>
+      <label for="exampleInputCertMedico">Certificado Medico</label>
+   <div class="custom-file">
+    
+     <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+     <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+    </div>
+     <div class="form-group">
+        <label for="exampleInputNroSocio">Nro Socio</label>
+        <input type="nrosocio" class="form-control" id="exampleInputNroSocio">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
