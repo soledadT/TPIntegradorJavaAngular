@@ -11,37 +11,41 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="User")
-public class User {
+public class User  {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int Id;
+	public int Id;
 	@Column
-	private String Name;
+	public  String Name;
 	@Column
-	private String Surname;
+	public  String Surname;
 	@Column
-	private String DNI;
+	public  String DNI;
 	@Column
-	private  Date BirthDay;
+	public   Date BirthDay;
 	@Column
-	private String Mail;
+	public  String Mail;
 	@Column
-	private String SocialWork;
+	public String SocialWork;
 	@Column
-	private String MedicalCertificate;
+	public  String MedicalCertificate;
 	@Column
-	private String Picture;
+	public  String NroPartner;
 	@Column
-	private String ContactName;
+	public  String ContactName;
 	@Column
-	private String ContactSurname;
+	public  String ContactSurname;
 	@Column
-	private String ContactDNI;
+	public String ContactDNI;
 	@Column
-	private String ContactMail;
+	public  String ContactMail;
 	@Column
-	private String ContactPhone;
+	public  String ContactPhone;
+	@Column
+	public  String Password;
+	@Column
+	public  Boolean Active;
 
 	
 	public Date getBirthDay() {
@@ -92,11 +96,11 @@ public class User {
 	public void setMedicalCertificate(String medicalCertificate) {
 		MedicalCertificate = medicalCertificate;
 	}
-	public String getPicture() {
-		return Picture;
+	public String getNroPartner() {
+		return NroPartner;
 	}
-	public void setPicture(String picture) {
-		Picture = picture;
+	public void setNroPartner(String nroPartner) {
+		NroPartner = nroPartner;
 	}
 	public String getContactName() {
 		return ContactName;
@@ -127,6 +131,18 @@ public class User {
 	}
 	public void setContactTelefono(String contactPhone) {
 		ContactPhone= contactPhone;
+	}
+	public String getPassword() {
+		return Password;
+	}
+	public void setPassword(String password) {
+		Password = password;
+	}
+	public Boolean getActive() {
+		return Active;
+	}
+	public void setActive(Boolean active) {
+		Active = active;
 	}
 	
 }
