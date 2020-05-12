@@ -1,5 +1,6 @@
 package edu.trabajopracticointegrador.entities;
 
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,44 +10,47 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 @Entity
 @Table(name="User")
-public class User  {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	public int Id;
+	private @JsonProperty int Id;
 	@Column
-	public  String Name;
+	private @JsonProperty String Name;
 	@Column
-	public  String Surname;
+	private @JsonProperty String Surname;
 	@Column
-	public  String DNI;
+	private @JsonProperty  String DNI;
 	@Column
-	public   Date BirthDay;
+	private @JsonProperty  Date BirthDay;
 	@Column
-	public  String Mail;
+	private @JsonProperty  String Mail;
 	@Column
-	public String SocialWork;
+	private @JsonProperty String SocialWork;
 	@Column
-	public  String MedicalCertificate;
+	private @JsonProperty String MedicalCertificate;
 	@Column
-	public  String NroPartner;
+	private @JsonProperty String NroPartner;
 	@Column
-	public  String ContactName;
+	private @JsonProperty String ContactName;
 	@Column
-	public  String ContactSurname;
+	private @JsonProperty String ContactSurname;
 	@Column
-	public String ContactDNI;
+	private @JsonProperty String ContactDNI;
 	@Column
-	public  String ContactMail;
+	private @JsonProperty  String ContactMail;
 	@Column
-	public  String ContactPhone;
+	private @JsonProperty String ContactPhone;
 	@Column
-	public  String Password;
+	private @JsonProperty String Password;
 	@Column
-	public  Boolean Active;
-
+	private @JsonProperty Boolean Active;
+	
 	
 	public Date getBirthDay() {
 		return BirthDay;
