@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/User';
 import { UserServiceService } from '../services/user-service.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -19,14 +20,14 @@ export class RegisterComponent implements OnInit {
   public nropartner: string;
 
 
-  constructor(private userService: UserServiceService) { }
+  constructor(private userService: UserServiceService, public datepipe: DatePipe) { }
 
   ngOnInit(): void {
   }
 
    guardar() {
      const user = new User(this.id, this.name,
-      this.surname, this.dni, this.birthday,
+      this.surname, this.dni, this.datepipe.transform(this.birthday, 'yyyy-MM-dd'),
       this.email, this.socialwork,
       this.medicalcertificate, this.nropartner,
        '', '', '', '', '', '', true);

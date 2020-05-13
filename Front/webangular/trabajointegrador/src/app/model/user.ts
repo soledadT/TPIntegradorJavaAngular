@@ -10,7 +10,7 @@ export class User {
 	
 	private DNI : String;
 	
-	private BirthDay : Date;
+	private BirthDay : String;
 
 	private Mail : String;
 	
@@ -35,7 +35,7 @@ export class User {
     private Active : Boolean;
     
     constructor(id : Number, name: String, surname : String, dni : String ,
-        birthDay : Date , mail : String, socialWork : String, 
+        birthDay : String , mail : String, socialWork : String, 
         medicalCertificate : String, nroPartner  : String, contactName : String , 
         contactSurname : String , contactDNI : String, contactMail: String,
         contactPhone : String , password : String , active  : Boolean ){
