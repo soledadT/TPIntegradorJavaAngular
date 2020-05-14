@@ -9,12 +9,11 @@ export class UserServiceService {
 
   constructor(private http: HttpClient) { }
 
-  guardoUser(user: User) {
-    this.http.post('http://localhost:8080/insertUser', user).subscribe(data => {
-      console.log(data);
-    }, err => {
-      console.log(err);
-    });
-
+  guardoUser(user: User): any {
+    return this.http.post('http://localhost:8080/insertUser', user);
   }
+
+   obtenerUsuarios(): any {
+    return this.http.get('http://localhost:8080/allUsers');
+   }
 }

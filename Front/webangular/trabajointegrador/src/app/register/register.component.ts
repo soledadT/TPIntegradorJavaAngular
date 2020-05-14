@@ -18,6 +18,8 @@ export class RegisterComponent implements OnInit {
   public socialwork: string;
   public medicalcertificate: string;
   public nropartner: string;
+  public mensaje: string;
+  
 
 
   constructor(private userService: UserServiceService, public datepipe: DatePipe) { }
@@ -32,9 +34,10 @@ export class RegisterComponent implements OnInit {
       this.medicalcertificate, this.nropartner,
        '', '', '', '', '', '', true);
 
-     this.userService.guardoUser(user);
-
-     console.log(user);
-
-  }
+     this.userService.guardoUser(user).subscribe(data => {
+      this.mensaje = data.messange;
+    }, err => {
+      return (err);
+    });
+   }
 }

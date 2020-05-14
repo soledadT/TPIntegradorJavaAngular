@@ -66,8 +66,11 @@ public class UserRestController {
 	}
 	
 	@GetMapping(value="allUsers")
-	public ResponseEntity<Iterable<User>> getAllUsers(){
-		return ResponseEntity.ok(userRepository.findAll());
+	public ResponseEntity<Answer<User>> getAllUsers(){
+		answer.setCode(200);
+		answer.setMessange("Lista de usuarios");
+		answer.setListobjectAnswer(userRepository.findAll());
+		return ResponseEntity.ok(answer);
 		
 	}
 	
