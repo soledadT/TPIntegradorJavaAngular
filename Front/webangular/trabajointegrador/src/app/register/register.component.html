@@ -19,7 +19,6 @@
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                 </div>
-                
     <div class="form-group">
         <label for="exampleInputMail">Mail</label>
         <input type="mail" name="email"  [(ngModel)]="email"  class="form-control" id="exampleInputMail">
@@ -30,7 +29,6 @@
       </div>
       <label for="exampleInputCertMedico">Certificado Medico</label>
    <div class="custom-file">
-    
      <input type="file" name="medicalcertificate"   [(ngModel)]="medicalcertificate" class="custom-file-input" id="customFileLang" lang="es">
      <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
     </div>
@@ -38,6 +36,26 @@
         <label for="exampleInputNroSocio">Nro Socio</label>
         <input type="nrosocio"  name="nropartner"   [(ngModel)]="nropartner" class="form-control" id="exampleInputNroSocio">
       </div>
-    <button type="submit" (click)="guardar()" class="btn btn-primary">Registrar</button>
+    <div *ngIf="isChild">
+      <h1>Contacto</h1>
+     <div class="form-group">
+        <label for="exampleInputNombreContacto">Nombre</label>
+        <input type="nombrecontacto" [(ngModel)]="namecontacto"  class="form-control"  name="namecontacto" aria-describedby="nombrecontactoHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputApellido">Apellido</label>
+        <input type="apellidocontacto"  [(ngModel)]="surnamecontacto" name="surnamecontacto" class="form-control" id="exampleInputApellidoContacto">
+      </div>
+      <div class="form-group">
+          <label for="exampleInputDNI">DNI</label>
+          <input type="dnicontacto"  name="dnicontacto"  [(ngModel)]="dnicontacto" class="form-control" id="exampleInputDNIContacto">
+        </div>
+                  
+      <div class="form-group">
+          <label for="exampleInputMailContacto">Mail</label>
+          <input type="mailcontacto" name="emailcontacto"  [(ngModel)]="emailcontacto"  class="form-control" id="exampleInputMailContacto">
+        </div>
+     </div>
+   <button type="submit" (click)="guardar()" class="btn btn-primary">Registrar</button>
   </form>
   <h1>{{ mensaje }}</h1>

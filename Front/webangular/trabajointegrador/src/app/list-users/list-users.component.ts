@@ -15,12 +15,10 @@ export class ListUsersComponent implements OnInit {
   constructor(private userService: UserServiceService) { }
 
   ngOnInit(): void {
-  }
-  obtenerUsuarios() {
-    this.userService.obtenerUsuarios().subscribe(data => {
+    this.userService.obtenerUsuarios().subscribe( (data: { listobjectAnswer: any; }) => {
       this.listUser = data.listobjectAnswer;
     }, err => {
       return (err);
     });
- }
+  }
 }

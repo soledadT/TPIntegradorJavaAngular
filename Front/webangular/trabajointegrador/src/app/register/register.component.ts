@@ -19,7 +19,11 @@ export class RegisterComponent implements OnInit {
   public medicalcertificate: string;
   public nropartner: string;
   public mensaje: string;
-  
+  public namecontacto: string;
+  public surnamecontacto: string;
+  public dnicontacto: string;
+  public emailcontacto: string;
+  public isChild = false ;
 
 
   constructor(private userService: UserServiceService, public datepipe: DatePipe) { }
@@ -28,16 +32,26 @@ export class RegisterComponent implements OnInit {
   }
 
    guardar() {
-     const user = new User(this.id, this.name,
-      this.surname, this.dni, this.datepipe.transform(this.birthday, 'yyyy-MM-dd'),
-      this.email, this.socialwork,
-      this.medicalcertificate, this.nropartner,
-       '', '', '', '', '', '', true);
+    const today = new Date();
+    const yearNow = today.getFullYear();
+    const year = this.datepipe.transform(this.birthday, 'YYYY');
 
-     this.userService.guardoUser(user).subscribe(data => {
-      this.mensaje = data.messange;
-    }, err => {
-      return (err);
-    });
-   }
+    // tslint:disable-next-line: radix
+    if (yearNow - Number.parseInt(year)  < 18) {
+      this.isChild = true;
+
+    } else {
+
+      const user = new User(this.id, this.name,
+        this.surname, this.dni, this.datepipe.transform(this.birthday, 'yyyy-MM-dd'),
+        this.email, this.socialwork,
+        this.medicalcertificate, this.nropartner,
+         this.namecontacto, this.surnamecontacto, this.dnicontacto, this.emailcontacto, '', '', true);
+      this.userService.guardoUser(user).subscribe((data: { messange: string; }) => {
+            this.mensaje = data.messange;
+            }, err => {
+             return (err);
+           });
+         }
+        }
 }

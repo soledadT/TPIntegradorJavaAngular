@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
