@@ -36,7 +36,7 @@
         <label for="exampleInputNroSocio">Nro Socio</label>
         <input type="nrosocio"  name="nropartner"   [(ngModel)]="nropartner" class="form-control" id="exampleInputNroSocio">
       </div>
-    <div *ngIf="isChild">
+    <div *ngIf="evaluar()" >
       <h1>Contacto</h1>
      <div class="form-group">
         <label for="exampleInputNombreContacto">Nombre</label>
