@@ -2,43 +2,43 @@
 
 export class User {
  
-    private Id : Number;
+    public Id : number;
 	
-	private Name : String;
+	public Name : string;
 	
-	private Surname: String;
+	public Surname: string;
 	
-	private DNI : String;
+	public  DNI : string;
 	
-	private BirthDay : String;
+	public BirthDay : string;
 
-	private Mail : String;
+	public Mail : string;
 	
-	private SocialWork : String;
+	public SocialWork : string;
 
-	private MedicalCertificate : String;
+	public MedicalCertificate : string;
 	
-	private NroPartner : String;
+	public NroPartner : string;
 	
-	private ContactName : String;
+	public ContactName : string;
 	
-	private ContactSurname : String;
+	public ContactSurname : string;
 	
-	private ContactDNI : String;
+	public ContactDNI : string;
 	
-	private ContactMail : String;
+	public ContactMail : string;
 	
-	private ContactPhone : String;
+	public ContactPhone : string;
 	
-	private Password : String;
+	public Password : string;
 	
-    private Active : Boolean;
+    public Active : boolean;
     
-    constructor(id : Number, name: String, surname : String, dni : String ,
-        birthDay : String , mail : String, socialWork : String, 
-        medicalCertificate : String, nroPartner  : String, contactName : String , 
-        contactSurname : String , contactDNI : String, contactMail: String,
-        contactPhone : String , password : String , active  : Boolean ){
+    constructor(id : number, name: string, surname : string, dni : string ,
+        birthDay : string , mail : string, socialWork : string, 
+        medicalCertificate : string, nroPartner  : string, contactName : string , 
+        contactSurname : string , contactDNI : string, contactMail: string,
+        contactPhone : string , password : string , active  : boolean ){
         this.Id =id;
 	    this.Name = name;
         this.Surname = surname;
@@ -57,7 +57,7 @@ export class User {
         this.Active = active;
     }
 
-    public getId(){
+    public getId() : number{
         return this.Id;
     }
 

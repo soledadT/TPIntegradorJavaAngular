@@ -11,14 +11,15 @@
       </tr>
     </thead>
     <tbody>
-     <tr *ngFor="let hero of listUser">
-        <td> {{ hero.Name }}</td>
-        <td>{{ hero.Surname }}</td>
-        <td>{{ hero.Email}}</td>
-        <td>{{ hero.DNI }}</td>
-        <td><button type="button" class="btn btn-outline-secondary">Editar</button></td>
+     <tr *ngFor="let user of listUser">
+        <td> {{ user.Name }}</td>
+        <td>{{ user.Surname }}</td>
+        <td>{{ user.Email}}</td>
+        <td>{{ user.DNI }}</td>
+        <td><button type="button" (click)="onSelect(user)" class="btn btn-outline-secondary">Editar</button></td>
         <td><button type="button" class="btn btn-outline-secondary">Eliminar</button></td>
       </tr>
      </tbody>
   </table>
+  <app-edit-user [user]="selectedUser" ></app-edit-user>
   

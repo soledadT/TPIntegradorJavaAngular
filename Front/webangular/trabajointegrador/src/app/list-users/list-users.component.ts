@@ -11,6 +11,11 @@ export class ListUsersComponent implements OnInit {
 
   public listUser: User[];
   public mensaje: string;
+  selectedUser: User;
+
+  onSelect(user: User): void {
+  this.selectedUser = user;
+}
 
   constructor(private userService: UserServiceService) { }
 
