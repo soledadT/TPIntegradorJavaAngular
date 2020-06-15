@@ -1,3 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
 <h1>Detalle Alumno</h1>
 <form *ngIf="user">
     <div class="form-group">
@@ -12,7 +26,50 @@
         <label for="exampleInputDNI">DNI</label>
         <input  type="number" [(ngModel)] = "user.DNI" name="dni"  >
       </div>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuNivel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Nivel
+        </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuNivel">
+          <a class="dropdown-item" >Escuelita</a>
+          <a class="dropdown-item" >Escuela</a>
+          <a class="dropdown-item" >Pre equipo</a>
+          <a class="dropdown-item" >Equipo</a>
+        </div>
+      </div>
+     <p></p>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuCategoria" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Categoria
+        </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuCategoria">
+          <a class="dropdown-item" >Pulgas</a>
+          <a class="dropdown-item" >Pre Mini</a>
+          <a class="dropdown-item" >Mini</a>
+          <a class="dropdown-item" >Pre infantil</a>
+          <a class="dropdown-item" >Infantil</a>
+          <a class="dropdown-item" >Juvenil</a>
+          <a class="dropdown-item" >Avanzada</a>
+        </div>
+      </div>
+      <p></p>
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" id="dropdownMenuValor" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Valor
+        </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuValor">
+          <a class="dropdown-item" >1000</a>
+          <a class="dropdown-item" >1500</a>
+          <a class="dropdown-item" >2000</a>
+          <a class="dropdown-item" >2500</a>
+        </div>
+      </div>
+      
+      
      
-   <button type="submit" class="btn btn-primary">Registrar</button>
+     <div></div>
+
   </form>
+  </body>
+</html>
 
