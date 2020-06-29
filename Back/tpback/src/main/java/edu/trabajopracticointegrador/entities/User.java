@@ -2,12 +2,19 @@ package edu.trabajopracticointegrador.entities;
 
 
 import java.util.Date;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -50,6 +57,20 @@ public class User {
 	private @JsonProperty String Password;
 	@Column
 	private @JsonProperty Boolean Active;
+	
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name ="user_rol",
+	joinColumns = @JoinColumn(name="user_id"),
+	inverseJoinColumns = @JoinColumn(name="rol_id"))
+	private  @JsonProperty Set<Rol> role;
+	
+	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	 private @JsonProperty  Set<UserAssistance> userAssistance;
+	 
+	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	 private @JsonProperty  Set<UserPayment> userPayment;
+	
 	
 	
 	public Date getBirthDay() {

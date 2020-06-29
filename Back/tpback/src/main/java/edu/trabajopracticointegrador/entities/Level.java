@@ -1,10 +1,25 @@
 package edu.trabajopracticointegrador.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name="Level")
 public class Level {
 	
-	private int Id;
-	private String Description;
-	private Boolean Active;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private @JsonProperty  int Id;
+	@Column
+	private @JsonProperty  String Description;
+	@Column
+	private @JsonProperty Boolean Active;
 	
 	public int getId() {
 		return Id;

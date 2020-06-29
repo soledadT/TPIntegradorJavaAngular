@@ -15,7 +15,7 @@ public class Answer<T> {
 	private int code;
 	private String messange;
 	private T objectAnswer;
-	private Iterable<User>  listobjectAnswer;
+	private Iterable<T>  listobjectAnswer;
 	
 	public int getCode() {
 		return code;
@@ -35,11 +35,11 @@ public class Answer<T> {
 	public void setObjectAnswer(T objectAnswer) {
 		this.objectAnswer = objectAnswer;
 	}
-	public void setListobjectAnswer(Iterable<User> responseEntity) {
+	public void setListobjectAnswer(Iterable<T> responseEntity) {
 		this.listobjectAnswer = responseEntity;
 	}
 	
-	public Iterable<User> getListobjectAnswer() {
+	public Iterable<T> getListobjectAnswer() {
 		return listobjectAnswer;
 	}
 

@@ -1,9 +1,27 @@
 package edu.trabajopracticointegrador.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Entity
+@Table(name="Cost")
 public class Cost {
-	private int Id;
-	private String description;
-	private Boolean Active;
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private @JsonProperty  int Id;
+	@Column
+	private  @JsonProperty  String description;
+	@Column
+	private @JsonProperty  Boolean Active;
+	
+	
 	
 	public int getId() {
 		return Id;
