@@ -25,7 +25,7 @@ public class UserPayment {
 	public @JsonProperty int ParcialPayment;
 	@ManyToOne
 	@JoinColumn(name = "FK_User", nullable = false, updatable = false)
-	private User user;
+	private @JsonProperty User user;
 	
 	
 	

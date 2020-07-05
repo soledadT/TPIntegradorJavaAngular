@@ -70,6 +70,9 @@ public class User {
 	 
 	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
 	 private @JsonProperty  Set<UserPayment> userPayment;
+	 
+	 @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+	 private @JsonProperty  Set<UserLevelCategoryDayCost> userLevelCategoryDayCost;
 	
 	
 	
