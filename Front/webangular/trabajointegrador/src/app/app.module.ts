@@ -9,6 +9,11 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { EditCategoryComponent} from './edit-category/edit-category.component';
+import { EditCostComponent} from './edit-cost/edit-cost.component';
+import { EditDayComponent} from './edit-day/edit-day.component';
+import { EditRolComponent} from './edit-rol/edit-rol.component';
+import { EditLevelComponent } from './edit-level/edit-level.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +21,13 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     LoginComponent,
     RegisterComponent,
     ListUsersComponent,
-    EditUserComponent
-  ],
+    EditUserComponent,
+    EditCategoryComponent,
+    EditCostComponent,
+    EditDayComponent,
+    EditRolComponent,
+    EditLevelComponent
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
