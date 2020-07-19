@@ -11,6 +11,6 @@ export class RolService {
   constructor(private http: HttpClient) { }
 
   guardoRol(rol: Rol): any {
-    return this.http.post('http://localhost:8080/insertCategory', rol);
+    return this.http.post('http://localhost:8080/insertRol', rol);
   }
 }

@@ -17,7 +17,7 @@ public class Day {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private @JsonProperty  int Id;
 	@Column
-	private @JsonProperty  String nameDay;
+	private @JsonProperty  String NameDay;
 	@Column
 	private  @JsonProperty boolean Active;
 
@@ -28,10 +28,10 @@ public class Day {
 		Id = id;
 	}
 	public String getNameDay() {
-		return nameDay;
+		return NameDay;
 	}
 	public void setNameDay(String nameDay) {
-		this.nameDay = nameDay;
+		this.NameDay = nameDay;
 	}
 	public boolean isActive() {
 		return Active;

@@ -11,6 +11,6 @@ public level: Level;
   constructor(private http: HttpClient) { }
 
   guardoLevel(level: Level): any {
-    return this.http.post('http://localhost:8080/insertCategory', level);
+    return this.http.post('http://localhost:8080/insertLevel', level);
   }
 }

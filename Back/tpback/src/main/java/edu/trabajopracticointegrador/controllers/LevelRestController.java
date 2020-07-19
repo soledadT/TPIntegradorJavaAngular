@@ -51,8 +51,8 @@ public class LevelRestController {
 		return ResponseEntity.ok(answer);
 	}
 	
-	@GetMapping(value="getAll")
-	public ResponseEntity<Answer<Level>> getAll(){
+	@GetMapping(value="allLevel")
+	public ResponseEntity<Answer<Level>> getAllLevel(){
 		answer.setCode(200);
 		answer.setListobjectAnswer(levelRepository.findAll());
 		answer.setMessange("Lista de nivel");

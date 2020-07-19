@@ -30,7 +30,7 @@ public class CategoryRestController {
 		Category category = categoryRepository.findById(id).orElse(new Category());
 		answer.setCode(200);
 		answer.setObjectAnswer(category);
-		answer.setMessange("El usuario fue encontrado");
+		answer.setMessange("La categoria fue encontrado");
 		
 		return ResponseEntity.ok(answer);
 	}
@@ -39,7 +39,7 @@ public class CategoryRestController {
 	public ResponseEntity<Answer<Category>> insertCategory(@RequestBody Category category){
 	  try {
 		categoryRepository.save(category);
-		answer.setMessange("El usuario se guardo correctamente");
+		answer.setMessange("La categoria se guardo correctamente");
 		answer.setCode(200);
 		answer.setObjectAnswer(category);
 	   }catch(Exception e) {
@@ -52,8 +52,8 @@ public class CategoryRestController {
            return ResponseEntity.ok(answer);
 	}
 	
-	@GetMapping(value="getAll")
-	public ResponseEntity<Answer<Category>> getAll(){
+	@GetMapping(value="allCategory")
+	public ResponseEntity<Answer<Category>> getAllCategory(){
 		answer.setCode(200);
 		answer.setMessange("Lista de categorias");
 		answer.setListobjectAnswer(categoryRepository.findAll());

@@ -53,8 +53,8 @@ public class DayRestController {
 		
 	}
 	
-	@GetMapping(value="getAll")
-	public ResponseEntity<Answer<Day>> getAll(){
+	@GetMapping(value="allDay")
+	public ResponseEntity<Answer<Day>> getAllDay(){
 		answer.setCode(200);
 		answer.setListobjectAnswer(dayRepository.findAll());
 		answer.setMessange("Lista de dias");

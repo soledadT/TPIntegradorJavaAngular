@@ -28,7 +28,7 @@ public class CostRestController {
 	public ResponseEntity<Answer<Cost>> getCost(@PathVariable int id){
 		Cost cost = costRepository.findById(id).orElse(new Cost());
 		answer.setCode(200);
-		answer.setMessange("La categoria fue encontrada");
+		answer.setMessange("El costo fue encontrado");
 		answer.setObjectAnswer(cost);
 		return ResponseEntity.ok(answer);
 	}
@@ -37,7 +37,7 @@ public class CostRestController {
 	public ResponseEntity<Answer<Cost>> insertCost(@RequestBody Cost cost){
 	try {
 			costRepository.save(cost);
-			answer.setMessange("El usuario se guardo correctamente");
+			answer.setMessange("El Costo se guardo correctamente");
 			answer.setCode(200);
 			answer.setObjectAnswer(cost);
 		}catch(Exception e) {
@@ -50,8 +50,8 @@ public class CostRestController {
 	
 	}
 	
-	@GetMapping(value="getAll") 
-	public ResponseEntity<Answer<Cost>> getAll(){
+	@GetMapping(value="allCost") 
+	public ResponseEntity<Answer<Cost>> getAllCost(){
 		answer.setCode(200);
 		answer.setListobjectAnswer(costRepository.findAll());
 		answer.setMessange("Lista de costos");

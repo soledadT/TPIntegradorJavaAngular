@@ -17,7 +17,7 @@ public class Cost {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private @JsonProperty  int Id;
 	@Column
-	private  @JsonProperty  String description;
+	private  @JsonProperty  String Description;
 	@Column
 	private @JsonProperty  Boolean Active;
 	
@@ -30,10 +30,10 @@ public class Cost {
 		Id = id;
 	}
 	public String getDescription() {
-		return description;
+		return Description;
 	}
 	public void setDescription(String description) {
-		this.description = description;
+		this.Description = description;
 	}
 	public Boolean getActive() {
 		return Active;
