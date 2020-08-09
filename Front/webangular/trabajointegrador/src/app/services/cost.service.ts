@@ -13,4 +13,8 @@ export class CostService {
   guardoCost(cost: Cost): any {
     return this.http.post('http://localhost:8080/insertCost', cost);
   }
+
+  obtenerCost(): any {
+    return this.http.get('http://localhost:8080/allCost');
+   }
 }

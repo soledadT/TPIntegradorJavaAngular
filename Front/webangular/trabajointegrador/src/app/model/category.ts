@@ -2,7 +2,7 @@ export class Category {
 public Id: number;
 public Description: string;
 public Active: boolean;
-constructor(id: number, description: string, active: boolean ){
+constructor(active: boolean, description: string, id: number) {
         this.Id = id;
         this.Description = description;
         this.Active =  active;

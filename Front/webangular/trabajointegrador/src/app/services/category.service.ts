@@ -13,4 +13,8 @@ export class CategoryService {
   guardoCategory(category: Category): any {
     return this.http.post('http://localhost:8080/insertCategory', category);
   }
+
+  obtenerCategory(): any {
+    return this.http.get('http://localhost:8080/allCategory');
+   }
 }

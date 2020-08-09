@@ -13,4 +13,8 @@ public level: Level;
   guardoLevel(level: Level): any {
     return this.http.post('http://localhost:8080/insertLevel', level);
   }
+
+  obtenerLevel(): any {
+    return this.http.get('http://localhost:8080/allLevel');
+   }
 }

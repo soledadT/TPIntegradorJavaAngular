@@ -19,7 +19,7 @@ export class EditCategoryComponent implements OnInit {
   }
 
   guardar() {
-    const category = new Category(this.id, this.description, this.active);
+    const category = new Category( this.active, this.description,  this.id);
     this.categoryService.guardoCategory(category).subscribe((data: { messange: string; }) => {
              this.mensaje = data.messange;
              }, (err: any) => {

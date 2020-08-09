@@ -23,6 +23,7 @@ export class ListUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.obtenerUsuarios().subscribe( (data: { listobjectAnswer: any; }) => {
+      console.log(data.listobjectAnswer);
       this.listUser = data.listobjectAnswer;
     }, err => {
       return (err);
